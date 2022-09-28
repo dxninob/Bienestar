@@ -20,6 +20,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('modules/', include('modules.urls')),
     path('test/', include('ryfftest.urls')),
-    path('users/', include('users.urls')),
-    path('users/', include('django.contrib.auth.urls')),
 ]
