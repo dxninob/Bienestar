@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RYFF TEST</title>
+  </head>
+  <body>
+    {% for question in questions %}
+    <tr>
+      <td>{{question.id}}. {{question.description}} </br> </td>
+      <input type="radio" name="question{{question.id}}" value="Totalmente en desacuerdo"/>Totalmente en desacuerdo<br />
+      <input type="radio" name="question{{question.id}}" value="En desacuerdo"/>En desacuerdo<br />
+      <input type="radio" name="question{{question.id}}" value="Ni en acuerdo ni en desacuerdo"/>Ni en acuerdo ni en desacuerdo<br />
+      <input type="radio" name="question{{question.id}}" value="De acuerdo"/>De acuerdo<br />
+      <input type="radio" name="question{{question.id}}" value="Totalmente de acuerdo"/>Totalmente de acuerdo<br /><br />
+    </tr>
+    {% endfor %}
+    <input type="submit" name="submit">
+  </body>
+</html>
